@@ -60,9 +60,10 @@ a{color:var(--secondary)}
 .schedule-col{min-width:0}
 .schedule-col .card{height:100%}
 .speaker-col{min-width:0}
-.speaker-col{display:flex;flex-direction:column;gap:0.5rem}
+.speaker-col{display:flex;flex-direction:column;gap:0.25rem}
 .speaker-col h4{margin-top:0}
-.speaker-col .small{margin-top:0.25rem}
+.speaker-col p{margin:0}
+.speaker-col .small{margin-top:0.6rem}
 .schedule-col h4{margin-top:0;margin-bottom:0.5rem}
 .schedule-row .card{display:flex;flex-direction:column}
 .compact-table{margin-top:0}
@@ -71,3 +72,20 @@ a{color:var(--secondary)}
   .schedule-row{grid-template-columns:1fr;}
   .speaker-col{order:2}
 }
+/* Submission portal box styling (compact, centered) */
+.submission-portal-box{
+  background: linear-gradient(135deg,#fffaf0,#f0fcff);
+  border: 1px solid rgba(52,152,219,0.12);
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(44,62,80,0.06);
+  margin: 1.5rem auto;
+  max-width: 520px;
+  display: block;
+  text-align: center;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.submission-portal-box:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(44,62,80,0.10)}
+.submission-portal-box .submission-cta{display:inline-block;background:var(--secondary);color:#fff;padding:0.45rem 0.75rem;border-radius:6px;text-decoration:none;font-weight:600;box-shadow:0 6px 12px rgba(52,152,219,0.12);transition:opacity .12s ease;margin:0.25rem auto 0}
+.submission-portal-box .submission-cta[aria-disabled="true"]{opacity:0.85;pointer-events:none}
+@media (max-width:480px){.submission-portal-box{padding:0.6rem 0.75rem}.submission-portal-box .submission-cta{padding:0.4rem 0.6rem}}
